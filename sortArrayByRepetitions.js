@@ -7,5 +7,5 @@ arr.forEach((elem) => {
   elemMap.set(elem, elemMap.has(elem) ? elemMap.get(elem) + 1 : 1);
 });
 
-let newArr = [...elemMap].sort((a, b) => b[1] - a[1]);
-console.log(newArr.map((elem) => elem[0]));
+let newArr = [...elemMap.entries()].sort((a, b) => b[1] - a[1]);
+console.log(newArr.map(elem => elem[0]));
